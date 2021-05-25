@@ -1,0 +1,685 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ON SOLUTION</title>
+<meta name="author" content="Miguel Rodriguez">
+<meta name="generator" content="WYSIWYG Web Builder 16 - http://www.wysiwygwebbuilder.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="ic.png" rel="icon" sizes="100x100" type="image/png">
+<link href="ic.png" rel="icon" sizes="100x100" type="image/png">
+<link href="ic.png" rel="icon" sizes="100x100" type="image/png">
+<link href="css/base/jquery-ui.min.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/on_legal.css" rel="stylesheet">
+<link href="css/index.css" rel="stylesheet">
+<script src="jquery-1.12.4.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script src="skrollr.min.js"></script>
+<script src="wb.panel.min.js"></script>
+<script src="util.min.js"></script>
+<script src="scrollspy.min.js"></script>
+<script src="wb.newsviewer.min.js"></script>
+<script src="wb.animatesvg.min.js"></script>
+<script src="modal.min.js"></script>
+<script src="wwb16.min.js"></script>
+<script>   
+   $(document).ready(function()
+   {
+      $('#reviewsImage1').addClass('visibility-hidden');
+      $('#portfolio-image2').addClass('visibility-hidden');
+      $('#wb_LayoutGrid4').addClass('visibility-hidden');
+      $('#wb_Card1').addClass('visibility-hidden');
+      $('#reviewsImage1').addClass('visibility-hidden');
+      $('#portfolio-image2').addClass('visibility-hidden');
+      $("a[href*='#welcome']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_welcome').offset().top-68 }, 600, 'easeOutCirc');
+      });
+      $("a[href*='#acerca']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_acerca').offset().top-68 }, 600, 'easeOutQuad');
+      });
+      $("a[href*='#services']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_services').offset().top-68 }, 600, 'easeOutQuad');
+      });
+      function onScrollservices()
+      {
+         var $obj = $("#wb_services");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+            AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+         }
+      }
+      onScrollservices();
+      $(window).scroll(function(event)
+      {
+         onScrollservices();
+      });
+      $("a[href*='#skillsInner']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_skillsInner').offset().top-88 }, 600, 'easeOutCirc');
+      });
+      function skrollrInit()
+      {
+         skrollr.init({forceHeight: false, mobileCheck: function() { return false; }, smoothScrolling: false});
+      }
+      skrollrInit();
+      $("a[href*='#servicesLayoutGrid1']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_servicesLayoutGrid1').offset().top-68 }, 600, 'easeOutCirc');
+      });
+      $("#skillsProgressbar1").progressbar(
+      {
+         value: 95
+      });
+      $("#skillsProgressbar2").progressbar(
+      {
+         value: 90
+      });
+      $("#skillsProgressbar3").progressbar(
+      {
+         value: 85
+      });
+      $("#skillsProgressbar4").progressbar(
+      {
+         value: 80
+      });
+      $("a[href*='#contactForm']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_contactForm').offset().top-88 }, 600, 'easeOutCirc');
+      });
+      $("a[href*='#LayoutGrid1']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_LayoutGrid1').offset().top }, 600, 'easeOutQuad');
+      });
+      $("#PanelLayer").panel({animate: true, animationDuration: 500, animationEasing: 'easeOutCubic', dismissible: true, display: 'push', position: 'right'});
+      var NewsFeedTicker1_Data = new Array();
+      NewsFeedTicker1_Data[0] = ["", "1", "", "Software Factory"];
+      NewsFeedTicker1_Data[1] = ["", "2", "", "Software on Demand"];
+      NewsFeedTicker1_Data[2] = ["", "3", "", "Graphic Design"];
+      NewsFeedTicker1_Data[3] = ["", "4", "", "Web Design"];
+      $("#NewsFeedTicker1").newsviewer({ mode: 'rotate', pause: 5000, pause: 5000, animation: 4, animationDuration: 300, sortOrder: 0, dataSource: 'local', param: NewsFeedTicker1_Data, target: '_self', includeDate: false, maxItems: 10});
+      $("#RollOverLayer3").click(function(e)
+      {
+         if (!$(this).hasClass('active'))
+         {
+            $(this).addClass('active');
+            $('.default, .hover', this).removeClass('animate reverse').width();
+            $('.default, .hover', this).addClass('animate');
+         }
+         else
+         {
+            $(this).removeClass('active');
+            $('.default, .hover', this).removeClass('animate').width();
+            $('.default, .hover', this).addClass('animate reverse');
+         }
+      });
+      function onScrollLayoutGrid4()
+      {
+         var $obj = $("#wb_LayoutGrid4");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(true))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('wb_LayoutGrid4', 'animate-fade-in-right', 100, 2000);
+         }
+         else
+         if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+         {
+            $obj.removeClass("in-viewport");
+            AnimateCss('wb_LayoutGrid4', 'animate-fade-out', 0, 0);
+         }
+      }
+      if (!$('#wb_LayoutGrid4').inViewPort(true))
+      {
+         $('#wb_LayoutGrid4').addClass("in-viewport");
+      }
+      onScrollLayoutGrid4();
+      $(window).scroll(function(event)
+      {
+         onScrollLayoutGrid4();
+      });
+      function onScrollCard1()
+      {
+         var $obj = $("#wb_Card1");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('wb_Card1', 'animate-fade-in-left', 100, 2000);
+         }
+         else
+         if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+         {
+            $obj.removeClass("in-viewport");
+            AnimateCss('wb_Card1', 'animate-fade-out', 0, 0);
+         }
+      }
+      if (!$('#wb_Card1').inViewPort(true))
+      {
+         $('#wb_Card1').addClass("in-viewport");
+      }
+      onScrollCard1();
+      $(window).scroll(function(event)
+      {
+         onScrollCard1();
+      });
+      $("a[href*='#pro']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_pro').offset().top-68 }, 600, 'easeOutQuad');
+      });
+      function onScrollpro()
+      {
+         var $obj = $("#wb_pro");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+            AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+         }
+      }
+      onScrollpro();
+      $(window).scroll(function(event)
+      {
+         onScrollpro();
+      });
+      $("a[href*='#LayoutGrid5']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_LayoutGrid5').offset().top-68 }, 600, 'easeOutCirc');
+      });
+      $("a[href*='#contact']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_contact').offset().top-68 }, 600, 'easeOutQuad');
+      });
+      $("#ClipArt2").animatesvg(
+      {
+         delay: 200,
+         duration: 2000,
+         easing: 'linear',
+         loop: true
+      });
+      $("#ClipArt2").animatesvg('animate');
+      $('#privacyPopup').on('show.bs.modal', function (e) 
+      {
+         $('#privacyPopup .modal-dialog').removeClass('animate-hide');
+         $('#privacyPopup .modal-dialog').addClass('animate-show');
+      });
+      $('#privacyPopup').on('hide.bs.modal', function (e)
+      {
+         $('#privacyPopup .modal-dialog').removeClass('animate-show');
+         var element = document.getElementById('privacyPopup');
+         var forceReflow = element.offsetWidth;
+         $('#privacyPopup .modal-dialog').addClass('animate-hide');
+      });
+      $('#privacyPopup').modal('show');
+      if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {$('#preloader').remove();}
+   });
+   $(window).on('load', function()
+   {
+      $('#preloader').remove();
+   });
+</script>
+<!-- Messenger plugin de chat Code -->
+      <div id="fb-root"></div>
+    <!-- Your plugin de chat code -->
+      <div id="fb-customer-chat" class="fb-customerchat">
+      </div>
+    <script>   
+         var chatbox = document.getElementById('fb-customer-chat');
+         chatbox.setAttribute("page_id", "103093834902247");
+         chatbox.setAttribute("attribution", "biz_inbox");
+         window.fbAsyncInit = function() {
+           FB.init({
+             xfbml            : true,
+             version          : 'v10.0'
+           });
+         };
+   
+         (function(d, s, id) {
+           var js, fjs = d.getElementsByTagName(s)[0];
+           if (d.getElementById(id)) return;
+           js = d.createElement(s); js.id = id;
+           js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
+           fjs.parentNode.insertBefore(js, fjs);
+         }(document, 'script', 'facebook-jssdk'));
+       
+</script><script>   
+   $(document).ready(function()
+   {
+      var $progressbars = $('.ui-progressbar');
+      
+      $progressbars.each(function() 
+      {
+        var $obj = $(this);
+        $obj.data('value', $obj.progressbar('option', 'value'));
+        $obj.data('done', false);
+        $obj.progressbar('option', 'value', 0);
+      });
+      $(window).bind('scroll', function() 
+      {
+         $progressbars.each(function() 
+         {
+            var $obj = $(this);
+            if (!$obj.data('done') && $(window).scrollTop() + $(window).height() >= $obj.offset().top) 
+            {
+               $obj.data('done', true);
+               $obj.animate({scroll: 1}, 
+               { 
+                  duration: 3000, 
+                  step: function(now) 
+                  {
+                     var $obj = $(this);
+                     var val = Math.round($obj.data('value') * now);
+                     $obj.progressbar('option', 'value', val);
+                  }
+               });
+            }
+         });
+      }).triggerHandler('scroll');
+   });
+</script><script src="js/particles.min.js"></script>
+<script>   
+   $(document).ready(function()
+   {
+      $('#welcome').prepend('<div id="particles1"></div>');
+    
+    particlesJS("particles1",{"particles":{"number":{"value":80,"density":{"enable":true,"value_area":800}},"color":{"value":"#4a4a4a"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":8},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0,"random":true,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":0,"random":false,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":true,"distance":80.17060304327615,"color":"#ffffff","opacity":0.07215354273894853,"width":9.13944874693348},"move":{"enable":true,"speed":6,"direction":"none","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":false,"mode":"repulse"},"onclick":{"enable":false,"mode":"push"},"resize":true},"modes":{"grab":{"distance":935.0649350649351,"line_linked":{"opacity":0.2833296905230267}},"bubble":{"distance":371.6283716283716,"size":91.9080919080919,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":343.65634365634367,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});var count_particles, stats, update; stats = new Stats; stats.setMode(0); stats.domElement.style.position = 'absolute'; stats.domElement.style.left = '0px'; stats.domElement.style.top = '0px'; document.body.appendChild(stats.domElement); count_particles = document.querySelector('.js-count-particles'); update = function() { stats.begin(); stats.end(); if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) { count_particles.innerText = window.pJSDom[0].pJS.particles.array.length; } requestAnimationFrame(update); }; requestAnimationFrame(update);;
+   });
+</script><script>   
+   $(document).ready(function () 
+   {
+       if (document.cookie.indexOf("privacynotice=true")<0) 
+       {
+           $("#privacyPopup").modal("show");
+       }
+       $("#privacyCheckBox").change(function () 
+       {
+          document.cookie = "privacynotice=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";    
+          $("#privacyPopup").modal("hide");
+       });
+      
+   });
+</script>
+</head>
+<body data-spy="scroll" <!--="" Hotjar="" Tracking="" Code="" for="" --="">
+   <script>   
+       (function(h,o,t,j,a,r){
+           h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+           h._hjSettings={hjid:2420331,hjsv:6};
+           a=o.getElementsByTagName('head')[0];
+           r=o.createElement('script');r.async=1;
+           r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+           a.appendChild(r);
+       })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+   </script>
+>
+   <div id="wb_welcome">
+      <div id="welcome-overlay"></div>
+      <div id="welcome">
+         <div class="col-1">
+            <div id="wb_Image1">
+               <img src="logo.webp" id="Image1" alt="">
+            </div>
+            <div id="wb_LayoutGrid2">
+               <div id="LayoutGrid2">
+                  <div class="row">
+                     <div class="col-1">
+                        <div id="wb_Text1" data-10-bottom-top="filter:blur(0px);" data-top-bottom="filter:blur(0px);">
+                           <p style="color:#FFFFFF;">SOLUTION</p>
+                        </div>
+                        <div id="wb_Text2">
+                           <span style="color:#FFFFFF;">Soluciones informáticas a tu alcance</span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div id="NewsFeedTicker1">
+            </div>
+            <div id="wb_Image2">
+               <a href="#acerca"><img src="images/scroll-down_.gif" id="Image2" alt=""></a>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_acerca">
+      <div id="acerca">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_skillsInner">
+                     <div id="skillsInner">
+                        <div class="row">
+                           <div class="col-1">
+                              <div class="col-1-padding">
+                                 <div id="wb_skillsHeading">
+                                    <p style="margin:6.67px 0px 6.67px 0px;font-size:16px;line-height:18px;font-weight:bold;color:#4E4E4E;"><span style="font-size:24px;line-height:27.5px;">NUESTROS PILARES</span></p>
+                                 </div>
+                                 <label for="" id="skillsLabel1">Software Factory Más de 800 mil horas de desarrollo</label>
+                                 <div id="skillsProgressbar1">
+                                 </div>
+                                 <label for="" id="skillsLabel2">Software on Demand Más de 600 mil horas de desarrollo</label>
+                                 <div id="skillsProgressbar2">
+                                 </div>
+                                 <label for="" id="skillsLabel3">Graphic Design Más de 400 mil diseños realizados</label>
+                                 <div id="skillsProgressbar3">
+                                 </div>
+                                 <label for="" id="skillsLabel4">Web Design Más de 300 mil horas de diseño y desarrollo</label>
+                                 <div id="skillsProgressbar4">
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-2">
+                              <div class="col-2-padding">
+                                 <div id="wb_skillsText">
+                                    <p style="margin:6.67px 0px 6.67px 0px;font-size:24px;line-height:27.5px;font-weight:bold;color:#4E4E4E;">ACERCA DE</p>
+                                    <p style="font-size:16px;line-height:18px;color:#4E4E4E;line-height:21.6px;">ON SOLUTION nace con el propósito de ayudar a las empresas a optimizar el uso de sus recursos, a través de la implantación soluciones informáticas.<span style="font-size:16px;line-height:18px;color:#4E4E4E;"><br/></span><span style="font-size:16px;line-height:18px;color:#4E4E4E;"><br/></span>Nuestra política consiste en lograr la mayor satisfacción de nuestros clientes, brindando los mejores servicios en soluciones informáticas y tecnológicas, dentro de los&nbsp;parámetros legales aplicables, orientado hacia la mejora contínua.</p>
+                                    <p style="font-size:16px;line-height:18px;font-weight:bold;line-height:21.6px;">&nbsp;</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_va">
+      <div id="va">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_Card1">
+                  <div id="Card1-card-body">
+                     <img id="Card1-card-item0" src="me.webp" alt="" title="">
+                     <div id="Card1-card-item1">Miguel Angel Rodriguez Martinez</div>
+                     <div id="Card1-card-item2">CEO - DEVELOPER</div>
+                     <div id="Card1-card-item3"><a href="https://www.instagram.com/miguel_rodmarti/" target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a></div>
+                     <div id="Card1-card-item4"><a href="https://www.facebook.com/orleugim" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></div>
+                     <div id="Card1-card-item5"><a href="mailto:orleugim@gmail.com" title="Email"><i class="fa fa-envelope"></i></a></div>
+                     <div id="Card1-card-item6"><a href="https://py.linkedin.com/in/miguel-angel-rodriguez-martinez-37a85a1a5" target="_blank" title="LinkedIn"><i class="fa fa-linkedin"></i></a></div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-2">
+               <div class="col-2-padding">
+                  <div id="wb_LayoutGrid4">
+                     <div id="LayoutGrid4">
+                        <div class="row">
+                           <div class="col-1">
+                              <div id="wb_IconFont4">
+                                 <div id="IconFont4"><i class="fa fa-quote-left"></i></div>
+                              </div>
+                           </div>
+                           <div class="col-2">
+                              <div id="wb_Text9">
+                                 <p style="font-size:29px;line-height:37px;color:#D9D9D9;"><span style="font-style:italic;">"Estamos en la constante b</span><span style="font-style:italic;">úsqueda de las mejores soluciones para nuestros clientes</span><span style="font-style:italic;">". </span></p>
+                                 <p style="font-family:Arial;font-size:11px;line-height:12px;">&nbsp;</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_services">
+      <div id="services">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_servicesHeading">
+                     <h1 id="servicesHeading">SERVICIOS</h1>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_servicesLayoutGrid1">
+      <div id="servicesLayoutGrid1">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_servicesCard1" data-100-bottom="opacity:0.0;" data--500-bottom="opacity:1.0;">
+                     <div id="servicesCard1-card-body">
+                        <div id="servicesCard1-card-item0"><i class="fa fa-code"></i></div>
+                        <div id="servicesCard1-card-item1">SOFTWARE</div>
+                        <div id="servicesCard1-card-item2">Análisis y desarrollo de sistemas de gestión administrativa.</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-2">
+               <div class="col-2-padding">
+                  <div id="wb_servicesCard2" data-100-bottom="opacity:0.0;" data--500-bottom="opacity:1.0;">
+                     <div id="servicesCard2-card-body">
+                        <div id="servicesCard2-card-item0"><i class="fa fa-globe"></i></div>
+                        <div id="servicesCard2-card-item1">WEB</div>
+                        <div id="servicesCard2-card-item2">Diseños web responsive, gestión de dominio y hosting.</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-3">
+               <div class="col-3-padding">
+                  <div id="wb_servicesCard3" data-100-bottom="opacity:0.0;" data--500-bottom="opacity:1.0;">
+                     <div id="servicesCard3-card-body">
+                        <div id="servicesCard3-card-item0"><i class="fa fa-paint-brush"></i></div>
+                        <div id="servicesCard3-card-item1">GRÁFICO</div>
+                        <div id="servicesCard3-card-item2">Diseño gráfico: editorial, publicitario e identidad corporativa.</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_LayoutGrid1">
+      <div id="LayoutGrid1">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_IconFont1">
+                  <a href="https://www.facebook.com/onsolutionpy" target="_blank"><div id="IconFont1"><i class="fa fa-facebook"></i></div></a>
+               </div>
+               <div id="wb_IconFont2">
+                  <a href="https://wa.me/595981454256" target="_blank"><div id="IconFont2"><i class="fa fa-whatsapp"></i></div></a>
+               </div>
+               <div id="wb_IconFont3">
+                  <a href="https://www.instagram.com/onsolutionpy/" target="_blank"><div id="IconFont3"><i class="fa fa-instagram"></i></div></a>
+               </div>
+            </div>
+            <div class="col-2">
+               <div id="wb_Heading2">
+                  <h1 id="Heading2">ON SOLUTION</h1>
+               </div>
+               <div id="wb_PanelMenu2">
+                  <a href="#PanelLayer" id="PanelMenu2">
+                     <span class="line"></span>
+                     <span class="line"></span>
+                     <span class="line"></span>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="PanelLayer">
+      <div id="wb_CssMenu1">
+         <ul id="CssMenu1" role="menubar" class="nav">
+            <li class="nav-item firstmain"><a role="menuitem" class="nav-link" href="#welcome" target="_self"><i class="fa fa-home">&nbsp;</i>INICIO</a>
+            </li>
+            <li class="nav-item"><a role="menuitem" class="nav-link" href="#acerca" target="_self"><i class="fa fa-info-circle">&nbsp;</i>ACERCA&nbsp;</a>
+            </li>
+            <li class="nav-item"><a role="menuitem" class="nav-link" href="#services" target="_self"><i class="fa fa-lightbulb-o">&nbsp;</i>SERVICIOS</a>
+            </li>
+            <li class="nav-item"><a role="menuitem" class="nav-link" href="#pro" target="_self"><i class="fa fa-product-hunt">&nbsp;</i>PRODUCTO</a>
+            </li>
+            <li class="nav-item"><a role="menuitem" class="nav-link" href="#contact" target="_self"><i class="fa fa-envelope">&nbsp;</i>CONTACTOS</a>
+            </li>
+         </ul>
+      </div>
+      <div id="wb_Card9">
+         <div id="Card9-card-body">
+            <div id="Card9-card-item0"><a href="https://www.facebook.com/onsolutionpy" target="_blank"><i class="fa fa-facebook"></i></a></div>
+            <div id="Card9-card-item1"><a href="https://wa.me/595981454256" target="_blank"><i class="fa fa-whatsapp"></i></a></div>
+            <div id="Card9-card-item2"><a href="https://www.instagram.com/onsolutionpy/" target="_blank"><i class="fa fa-instagram"></i></a></div>
+            <div id="Card9-card-item3"><a href="https://github.com/onsolutionpy" target="_blank"><i class="fa fa-github"></i></a></div>
+         </div>
+      </div>
+      <div id="wb_Text3">
+         <span style="color:#A5A5A5;font-family:Arial;font-size:13px;">ON SOLUTION ©</span>
+      </div>
+   </div>
+
+   <div id="wb_pro">
+      <div id="pro">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_Heading1">
+                     <h1 id="Heading1">PRODUCTO</h1>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_LayoutGrid5">
+      <div id="LayoutGrid5">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_Text4">
+                     <span style="color:#FFFFFF;font-family:Montserrat;font-size:53px;">SIGCE</span>
+                  </div>
+                  <div id="wb_infoBlock2Text">
+                     <p style="margin:6.67px 0px 6.67px 0px;font-size:27px;line-height:30px;color:#FFFFFF;">La solución a sus problemas comerciales.</p>
+                     <p style="margin:6.67px 0px 6.67px 0px;font-size:17px;line-height:20px;color:#FFFFFF;">On Solution se dedica al desarrollo y comercialización de Sistemas de Gestión Administrativa&nbsp;SIGCE (Sistema Integrado de Gestión y Control Empresarial), diseñado especialmente para empresas de comercio en general que requieren control de su flujo de caja e inventarios, y toda la gestión contable de forma fácil, ágil y segura.</p>
+                  </div>
+               </div>
+            </div>
+            <div class="col-2">
+               <div id="wb_ClipArt2">
+                  <svg id="ClipArt2" height="137" width="133" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                     <defs>
+                        <path id="ClipArt2-shape0" d="M124 82 L124 13 C124 12, 124 12, 124 11 C123 11, 123 10, 122 10 L11 10 C11 10, 10 11, 9 11 C9 12, 9 12, 9 13 L9 82 C9 82, 9 83, 9 83 C10 84, 11 84, 11 84 L122 84 C123 84, 123 84, 124 83 C124 83, 124 82, 124 82 Z"/>
+                        <path id="ClipArt2-shape1" d="M133 13 L133 103 C133 106, 132 109, 130 112 C128 115, 125 116, 122 116 L84 116 C84 118, 85 120, 85 122 C86 125, 87 127, 88 128 C88 130, 89 131, 89 132 C89 133, 88 135, 88 136 C86 137, 85 137, 84 137 L49 137 C48 137, 47 137, 46 136 C45 135, 44 133, 44 132 C44 131, 45 130, 45 128 C46 127, 47 125, 48 122 C48 120, 49 118, 49 116 L11 116 C8 116, 5 115, 3 112 C1 109, 0 106, 0 103 L0 13 C0 9, 1 6, 3 4 C5 1, 8 0, 11 0 L122 0 C125 0, 128 1, 130 4 C132 6, 133 9, 133 13"/>
+                     </defs>
+                     <clippath id="ClipArt2-clippath0">
+                        <use xlink:href="#ClipArt2-shape0"/>
+                     </clippath>
+                     <use xlink:href="#ClipArt2-shape0" data-href="#ClipArt2-shape0" clip-path="url(#ClipArt2-clippath0)" style="fill:none;stroke:#6B6B6B;stroke-width:4"/>
+                     <clippath id="ClipArt2-clippath1">
+                        <use xlink:href="#ClipArt2-shape1"/>
+                     </clippath>
+                     <use xlink:href="#ClipArt2-shape1" data-href="#ClipArt2-shape1" clip-path="url(#ClipArt2-clippath1)" style="fill:none;stroke:#6B6B6B;stroke-width:4"/>
+                  </svg>
+               </div>
+               <a id="Button3" href="https://sigce.github.io/py/" target="_blank">Para más info. haz clic aquí</a>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_contact">
+      <div id="contact-overlay"></div>
+      <div id="contact">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_contactForm">
+                     <form name="contactForm" method="get" action="mailto:orleugim@gmail.com" enctype="text/plain" id="contactForm">
+                        <div class="row">
+                           <div class="col-1">
+                              <div class="col-1-padding">
+                                 <div id="wb_Image4">
+                                    <a href="./Miguel Rodriguez (CEO -  ON SOLUTION ©).vcf" target="_blank"><img src="on solution .webp" id="Image4" alt=""></a>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-2">
+                              <div class="col-2-padding">
+                                 <div id="wb_contactText2">
+                                    <p style="margin:6.67px 0px 6.67px 0px;font-size:19px;line-height:21px;color:#4E4E4E;"><span style="font-weight:bold;">CONTACTOS</span></p>
+                                    <p style="margin:6.67px 0px 6.67px 0px;font-size:16px;line-height:18px;color:#4E4E4E;">Contacte con nosotros y le realizamos un análisis inicial sin compromiso.</p>
+                                    <p style="margin:6.67px 0px 6.67px 0px;font-size:16px;line-height:18px;color:#4E4E4E;">Si aún no eres cliente, te queremos dar razones para que empieces a serlo.</p>
+                                    <p style="margin:6.67px 0px 6.67px 0px;font-size:16px;line-height:18px;">&nbsp;</p>
+                                 </div>
+                                 <div id="wb_Breadcrumb1">
+                                    <ul id="Breadcrumb1">
+                                       <li><a href="tel:+595981454256"><i class="fa fa-phone">&nbsp;</i>+595 981 454 256</a></li>
+                                    </ul>
+                                 </div>
+                                 <div id="wb_Breadcrumb2">
+                                    <ul id="Breadcrumb2">
+                                       <li><a href="mailto:onsolution@protonmail.com"><i class="fa fa-envelope-o">&nbsp;</i> onsolution@protonmail.com</a></li>
+                                    </ul>
+                                 </div>
+                                 <div id="wb_Breadcrumb3">
+                                    <ul id="Breadcrumb3">
+                                       <li><a href="https://goo.gl/maps/xyqCpU1B1p2ak4819" target="_blank"><i class="fa fa-map-marker">&nbsp;</i>Curuguaty, Canindey&#250;, Paraguay</a></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_footer">
+      <div id="footer">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_contactText3">
+                  <p style="color:#FFFFFF;">© ON SOLUTION. Todos los derechos reservados</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="privacyPopup" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-dialog-centered">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+               <h4 class="modal-title"></h4>
+            </div>
+            <div class="modal-body">
+               <div id="wb_privacyHeading">
+                  <h1 id="privacyHeading">POLÍTICA DE PRIVACIDAD</h1>
+               </div>
+               <div id="wb_privacyText">
+                  <span style="color:#000000;font-family:Arial;font-size:13px;">El presente Política de Privacidad establece los términos en que ON SOLUTION usa y protege la información que es proporcionada por sus usuarios al momento de utilizar su sitio web. Esta compañía está comprometida con la seguridad de los datos de sus usuarios. Cuando le pedimos llenar los campos de información personal con la cual usted pueda ser identificado, lo hacemos asegurando que sólo se empleará de acuerdo con los términos de este documento. <br>Nuestro sitio web podrá recoger información personal, por ejemplo: Nombre, información de contacto como su dirección de correo electrónica e información demográfica. Así mismo cuando sea necesario podrá ser requerida información específica para procesar algún pedido o realizar una entrega o facturación.<br></span>
+               </div>
+               <input type="submit" id="privacyButton" onclick="$('#privacyPopup').modal('hide');return false;" name="" value="ACEPTO" tabindex="1" autofocus>
+               <hr id="privacyLine">
+               <div id="wb_privacyCheckBox">
+                  <input type="checkbox" id="privacyCheckBox" name="donotshow" value="on" tabindex="2"><label for="privacyCheckBox"></label>
+               </div>
+               <label for="NewsFeedTicker1" id="privacyLabel">No volver a mostrar esta ventana emergente</label>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="preloader"></div>
+</body>
+</html>
